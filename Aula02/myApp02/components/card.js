@@ -1,10 +1,15 @@
+import { router, useRouter } from "expo-router";
 import { StyleSheet, View, Text, Image, TouchableOpacity, ScrollView, Dimensions } from "react-native";
+
 
 
 const { width } = Dimensions.get('window');
 const cardWidth = width - 40; 
 
 export default function Card() {
+
+  const router = useRouter();
+
   return (
     <View style={styles.card}>
       
@@ -31,7 +36,7 @@ export default function Card() {
       <View style={styles.content}>
         <Text style={styles.title}>Ofertas Especiais!</Text>
 
-        <TouchableOpacity style={styles.buttonPrimary}>
+        <TouchableOpacity style={styles.buttonPrimary} onPress={() => router.navigate("/login")}>
           <Text style={styles.buttonPrimaryText}>COMPRAR AGORA</Text>
         </TouchableOpacity>
 
