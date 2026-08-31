@@ -7,9 +7,9 @@ import {
   ImageBackground
 } from "react-native";
 
-import styles from "./styles/styles";
-import Card from "./components/card";
-import Item from "./components/item";
+import styles from "../styles/styles";
+import Card from "../components/card";
+import Item from "../components/item";
 
 export default function App() {
   const categorias = [
@@ -26,7 +26,7 @@ export default function App() {
   return (
  
     <ImageBackground
-      source={require("./assets/images/wallpaper.jpg")} 
+      source={require("../assets/images/wallpaper.jpg")}
       style={styles.backgroundImage}
     >
       <SafeAreaView style={styles.container}>
