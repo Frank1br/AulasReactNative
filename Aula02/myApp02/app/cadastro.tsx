@@ -4,11 +4,11 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Login() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>Tela de cadastro</Text>
         <Text>
-            Ja tem cadastro? {' '}
-            <Link href="/cadastro" style={styles.link}>
-                Cadastre-se
+             Ja tem login? {' '}
+            <Link href="/login" style={styles.link}>
+                Login
             </Link>
         </Text>
     </View>
