@@ -1,15 +1,45 @@
 import { Link, useRouter } from "expo-router";
+import { useState } from "react";
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from "react-native";
 
 
 export default function Cadastro() {
   const router = useRouter();
+  const [nome, setNome]   = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
   return (
     <View style={styles.container}>
+
+        {/* <Text>{nome}</Text>
+        <Text>{email}</Text>
+        <Text>{senha}</Text> */}
+
       <Text style={styles.title}>Tela de cadastro</Text>
-        <TextInput placeholder="Seu Nome" style={styles.input}/>
-        <TextInput placeholder="emailmail@gmail.com" style={styles.input} keyboardType="email-address"/>
-        <TextInput placeholder="Senha" style={styles.input} secureTextEntry/>
+        <TextInput 
+        placeholder="Seu Nome" 
+        style={styles.input} 
+        value={nome} 
+        onChangeText={setNome}
+        />
+
+        <TextInput 
+        placeholder="emailmail@gmail.com" 
+        style={styles.input} 
+        keyboardType="email-address"
+        value={email}
+        onChangeText={setEmail}
+        />
+
+        <TextInput 
+        placeholder="Senha" 
+        style={styles.input} 
+        secureTextEntry
+        value={senha} 
+        onChangeText={setSenha}
+        />
+
         <TouchableOpacity style={styles.buttonPrimary} onPress={() => router.navigate("/login")}>
                   <Text style={styles.buttonPrimaryText}>Cadastrar</Text>
         </TouchableOpacity>
