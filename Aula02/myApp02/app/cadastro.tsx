@@ -2,7 +2,7 @@ import { Link, useRouter } from "expo-router";
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from "react-native";
 
 
-export default function Login() {
+export default function Cadastro() {
   const router = useRouter();
   return (
     <View style={styles.container}>
