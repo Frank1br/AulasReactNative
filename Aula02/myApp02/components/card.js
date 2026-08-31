@@ -30,6 +30,11 @@ export default function Card() {
             style={[styles.image, { width: cardWidth }]}
             resizeMode="contain"
           />
+          <Image
+            source={{ uri: "https://imgs.search.brave.com/ImmScQoVFBPFaq8SI3DXb0cYgG7-ZcJc5XLH8Dv0nyw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS50ZW5vci5jb20v/RmxhSF8yZHFsaVlB/QUFBTS91ZHlyLXNh/c3VrZS5naWY.gif" }} 
+            style={[styles.image, { width: cardWidth }]}
+            resizeMode="contain"
+          />
         </ScrollView>
       </View>
 
