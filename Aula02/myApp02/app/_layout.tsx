@@ -8,6 +8,9 @@ export default function RootLayout() {
             <Stack.Screen name="index" options={{ title: "FaTech - Home", headerShown:false }} />
             <Stack.Screen name="login" options={{ title: "FaTech - Login" }} />
             <Stack.Screen name="cadastro" options={{ title: "FaTech - Cadastro" }} />
+            <Stack.Screen name="dashboard" options={{ title: "FaTech - Dashboard" }} />
+            <Stack.Screen name="(tabs)" options={{ headerShown:false }} />
+            <Stack.Screen name="drawer" options={{ headerShown:false }} />
         </Stack>
     );
 }

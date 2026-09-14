@@ -1,5 +1,5 @@
 import { Link, useRouter } from "expo-router";
-import { useState } from "react";
+import { use, useState } from "react";
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from "react-native";
 
 
@@ -9,6 +9,9 @@ export default function Cadastro() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
+  const cadastrar = () => {
+      router.navigate({pathname: "/login", params: {"user":nome} });
+  } 
   return (
     <View style={styles.container}>
 
@@ -40,9 +43,10 @@ export default function Cadastro() {
         onChangeText={setSenha}
         />
 
-        <TouchableOpacity style={styles.buttonPrimary} onPress={() => router.navigate("/login")}>
+        <TouchableOpacity style={styles.buttonPrimary} onPress={cadastrar}>
                   <Text style={styles.buttonPrimaryText}>Cadastrar</Text>
         </TouchableOpacity>
+
         <Text>
              Ja tem login? {' '}
             <Link href="/login" style={styles.link}>
